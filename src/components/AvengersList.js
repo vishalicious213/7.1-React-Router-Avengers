@@ -7,7 +7,9 @@ function Roster() {
         avengers.map(avenger => {
             return (
                 <div key={avenger.id} className='character-card'>
-                    <img src={avenger.thumbnail} alt={avenger.name}></img>
+                    <Link to={`/avengers/${avenger.id}`}>
+                        <img className='charImg' src={avenger.thumbnail} alt={avenger.name}></img>
+                    </Link>
                     <Link to={`/avengers/${avenger.id}`}>
                         <h3>{avenger.name}</h3>
                     </Link>
